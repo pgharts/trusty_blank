@@ -1,0 +1,1 @@
+sass_options = {:load_paths => ["public/stylesheets/sass/admin"]}
