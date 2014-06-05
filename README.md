@@ -20,4 +20,4 @@ A blank instance of a TrustyCMS site, to be used for testing.
 8. The bootstrap script will ask you some questions.
   * when asked if you're sure, answer 'y'
   * Leave Name, Username, and Password as defaults by hitting enter when prompted
-  * ERROR: Install currently breaking at this step. Checking in docs to this point.
+9. That should do it. If you 'rails s' a server should start.
