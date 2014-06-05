@@ -12,7 +12,7 @@ A blank instance of a TrustyCMS site, to be used for testing.
 3. Rename Gemfile.example to Gemfile
 4. Change the :path for the trusy-cms gem to point to the folder where you cloned the trusty-cms repo.
   * it'll look like this: gem "trusty-cms", :path => '../trusty-cms'
-5. Rename database.yml.example to database.yml and edit to match the username, password, and host of your local mysql setup.
+5. Rename config/database.yml.example to config/database.yml and edit to match the username, password, and host of your local mysql setup.
 6. Run 'bundle install' to install all gems.
 7. Set up the database
   * rake db:create
