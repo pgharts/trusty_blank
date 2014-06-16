@@ -8,7 +8,7 @@ require 'trusty_cms/initializer'
 require 'string_extensions/string_extensions'
 require 'active_record_extensions/active_record_extensions'
 require 'configuration_extensions/configuration_extensions'
-
+require 'compass'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -24,6 +24,8 @@ module TrustyCms
 
     config.autoload_paths += %W(#{TRUSTY_CMS_ROOT}/lib)
     config.load_trusty_paths
+
+    Sass.load_paths << Compass::Frameworks['compass'].stylesheets_directory
 
     # Initialize extension paths
     config.initialize_extension_paths
