@@ -23,7 +23,6 @@ module TrustyCms
     include TrustyCms::Initializer
 
     config.autoload_paths += %W(#{TRUSTY_CMS_ROOT}/lib)
-    config.load_trusty_paths
 
     Sass.load_paths << Compass::Frameworks['compass'].stylesheets_directory
 
