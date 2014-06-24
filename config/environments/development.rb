@@ -15,5 +15,10 @@ TrustyCms::Application.configure do
   config.action_controller.perform_caching             = false
 
   # Don't care if the mailer can't send
+  # DAMN RIGHT!
   config.action_mailer.raise_delivery_errors = false
+
+  config.after_initialize do
+    SiteController.cache_timeout = 0.minutes
+  end
 end
