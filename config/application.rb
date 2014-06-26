@@ -9,6 +9,7 @@ require 'string_extensions/string_extensions'
 require 'active_record_extensions/active_record_extensions'
 require 'configuration_extensions/configuration_extensions'
 require 'compass'
+require 'rack/cache'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -81,10 +82,16 @@ module TrustyCms
 
 
     # TODO: We're not sure this is actually working, but we can't really test this until the app initializes.
-    config.middleware.use "TrustyCms::Cache"
+    config.middleware.use Rack::Cache,
+                          :private_headers => ['Authorization'],
+                          :entitystore => "radiant:tmp/cache/entity",
+                          :metastore => "radiant:tmp/cache/meta",
+                          :verbose => false,
+                          :allow_reload => false,
+                          :allow_revalidate => false
     # TODO: There's got to be a better place for this, but in order for assets to work fornow, we need ConditionalGet
     # TODO: Workaround from: https://github.com/rtomayko/rack-cache/issues/80
-    config.middleware.insert_before(Rack::ConditionalGet, TrustyCms::Cache)
+    config.middleware.insert_before(Rack::ConditionalGet, Rack::Cache)
     config.assets.enabled = true
 
 
