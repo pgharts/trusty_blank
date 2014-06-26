@@ -119,7 +119,6 @@ module TrustyCms
     config.after_initialize do
       extension_loader.load_extensions
       extension_loader.load_extension_initalizers
-      initialize_views
 
       #Dir["#{TRUSTY_CMS_ROOT}/config/initializers/**/*.rb"].sort.each do |initializer|
       #  load(initializer)
