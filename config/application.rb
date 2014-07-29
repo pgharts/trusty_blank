@@ -117,7 +117,7 @@ module TrustyCms
     # Set the default field error proc
     config.action_view.field_error_proc = Proc.new do |html, instance|
       if html !~ /label/
-        %{<span class="error-with-field">#{html} <span class="error">#{[instance.error_message].flatten.first}</span></span>}
+        %{<span class="error-with-fieldxxxx">#{html} <span class="error">#{[instance.error_message].flatten.first}</span></span>}.html_safe
       else
         html
       end
