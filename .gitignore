@@ -40,3 +40,4 @@ database.yml
 .rvmrc
 
 log/*
+.sass-cache/*
