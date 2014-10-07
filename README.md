@@ -12,6 +12,7 @@ A blank instance of a TrustyCMS site, to be used for testing.
 3. Clone required extensions to your local machine
   * git clone git@github.com:pgharts/trusty-snippets-extension.git
   * git clone git@github.com:pgharts/trusty-clipped-extension.git
+  * git clone git@github.com:pgharts/trusty-share-layouts-extension.git
 4. Rename Gemfile.example to Gemfile
 5. Change the :path for the trusy-cms gem & extensions to point to the folder where you cloned the trusty-cms repo.
   * it'll look like this: gem "trusty-cms", :path => '../trusty-cms'
