@@ -1,0 +1,14 @@
+Cultural District:
+  title: Cultural District
+  slug:  /
+  breadcrumb: home
+  status_id: 100
+  layout: home
+
+The Pittsburgh Cultural Trust:
+  title: The Pittsburgh Cultural Trust
+  slug:  pct_home
+  parent: /
+  breadcrumb: home
+  status_id: 100
+  layout: home

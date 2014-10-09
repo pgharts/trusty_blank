@@ -1,0 +1,24 @@
+Cultural District:
+  id: 1
+  name: Cultural District
+  subtitle: main
+  domain: .*culturaldistrict.[.\/]*
+  base_domain: culturaldistrict
+  position: 11
+
+The Pittsburgh Cultural Trust:
+  id: 2
+  name: The Pittsburgh Cultural Trust
+  subtitle: trustarts
+  domain: .*trustarts.culturaldistrict.[.\/]*
+  base_domain: trustarts.culturaldistrict
+  position: 1
+
+
+default_site:
+  id: 12
+  name: default_site
+  subtitle:
+  domain:
+  base_domain: localhost
+  position: 14
