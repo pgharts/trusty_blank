@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20120209231801) do
     t.integer  "updated_by_id"
     t.string   "content_type",  :limit => 40
     t.integer  "lock_version",                 :default => 0
+    t.integer  "site_id"
   end
 
   create_table "page_attachments", :force => true do |t|
@@ -131,6 +132,7 @@ ActiveRecord::Schema.define(:version => 20120209231801) do
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
     t.integer  "lock_version",                 :default => 0
+    t.integer  "site_id"
   end
 
   add_index "snippets", ["name"], :name => "name", :unique => true
@@ -151,8 +153,7 @@ ActiveRecord::Schema.define(:version => 20120209231801) do
     t.string   "salt"
     t.string   "session_token"
     t.string   "locale"
+    t.integer  "site_id"
   end
-
-  add_index "users", ["login"], :name => "login", :unique => true
 
 end

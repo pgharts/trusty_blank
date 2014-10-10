@@ -17,6 +17,7 @@ TrustyCms::Application.configure do
   # Don't care if the mailer can't send
   # DAMN RIGHT!
   config.action_mailer.raise_delivery_errors = false
+  config.domain = ".local"
 
   config.after_initialize do
     SiteController.cache_timeout = 0.minutes
