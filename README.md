@@ -23,7 +23,7 @@ A blank instance of a TrustyCMS site, to be used for testing.
 8. Set up the database
   * rake db:create
   * rake db:bootstrap
-  * rake trusty:seed:sites
+  * rake trusty:seed
 9. The bootstrap script will ask you some questions.
   * when asked if you're sure, answer 'y'
   * Leave Name, Username, and Password as defaults by hitting enter when prompted
