@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 require 'trusty_cms'
+require 'ckeditor'
 require 'radius'
 require 'trusty_cms/extension_loader'
 require 'trusty_cms/initializer'
