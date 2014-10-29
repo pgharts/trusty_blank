@@ -28,3 +28,21 @@ A blank instance of a TrustyCMS site, to be used for testing.
   * when asked if you're sure, answer 'y'
   * Leave Name, Username, and Password as defaults by hitting enter when prompted
 10. That should do it. If you 'rails s' a server should start.
+
+## Notes
+
+In order for ckeditor to work at present, it must be required in the application.rb file of the site after requiring trusty_cms.
+
+Like so:
+
+require 'rails/all'
+require 'trusty_cms'
+require 'ckeditor'
+require 'radius'
+require 'trusty_cms/extension_loader'
+require 'trusty_cms/initializer'
+require 'string_extensions/string_extensions'
+require 'active_record_extensions/active_record_extensions'
+require 'configuration_extensions/configuration_extensions'
+require 'compass'
+require 'rack/cache'
