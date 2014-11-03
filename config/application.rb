@@ -22,6 +22,8 @@ end
 module TrustyCms
   class Application < Rails::Application
 
+    attr_accessor :captcha_public_key, :captcha_private_key
+
     include TrustyCms::Initializer
 
     config.autoload_paths += %W(#{TRUSTY_CMS_ROOT}/lib)
@@ -52,6 +54,9 @@ module TrustyCms
     # By default, only English translations are loaded. Remove any of these from
     # the list below if you'd like to provide any of the additional options
     # config.ignore_extensions []
+
+    config.captcha_public_key = "6LcbvwsAAAAAACQjq3ZNqqBuDIHUR6gUthjhT9_Z"
+    config.captcha_private_key = "6LcbvwsAAAAAALftkG9kwwqbPCeThnSOyn-TK8n5"
 
     # Your secret key for verifying cookie session data integrity.
     # If you change this key, all old sessions will become invalid!
