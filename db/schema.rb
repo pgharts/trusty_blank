@@ -136,7 +136,7 @@ ActiveRecord::Schema.define(:version => 20120209231801) do
     t.integer  "site_id"
   end
 
-  add_index "snippets", ["name"], :name => "name", :unique => true
+  add_index "snippets", ["name", "site_id"], :name => "name_site_id", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "name",          :limit => 100
