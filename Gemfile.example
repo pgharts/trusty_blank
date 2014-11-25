@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 gem "trusty-cms", :path => '../trusty-cms'
 gem "trusty-snippets-extension", :path => '../trusty-snippets-extension'
 gem "trusty-clipped-extension", :path => '../trusty-clipped-extension'
+gem "trusty-layouts-extension", :path => '../trusty-share-layouts-extension'
+gem "trusty-multi-site-extension", :path => '../trusty-multi-site-extension'
+gem "trusty-reorder-extension", :path => '../trusty-reorder-extension'
+gem "trusty-rad-social-extension", :path => '../trusty-rad-social-extension'
 
 gem "mysql", "~> 2.9.1"
 
